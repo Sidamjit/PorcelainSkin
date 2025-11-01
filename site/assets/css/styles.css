@@ -54,17 +54,13 @@ header {
 }
 
 .brand {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  display: inline-block;
 }
 
-.brand span:last-child {
-  font-size: 0.75rem;
-  letter-spacing: 0.35em;
+.brand img {
+  display: block;
+  height: 3.5rem;
+  width: auto;
 }
 
 .nav-links {
@@ -502,8 +498,12 @@ footer .footer-content {
   }
 
   .brand {
-    width: 100%;
-    text-align: center;
+    margin: 0 auto 1rem;
+  }
+
+  .brand img {
+    height: 3rem;
+    margin: 0 auto;
   }
 
   .nav-links {
