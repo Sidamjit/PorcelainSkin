@@ -373,7 +373,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  padding: 0.85rem 1.9rem;
+  padding: 0.65rem 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.8rem;
@@ -796,7 +796,7 @@ footer .footer-content {
 
 .feature-split {
   padding: 5.5rem 0;
-  background: linear-gradient(180deg, #f8ebe4 0%, #fdeee7 40%, #fff6f2 100%);
+  background: linear-gradient(180deg, #c9a785 0%, #d8b696 46%, #e7cab0 100%);
 }
 
 .feature-split .container {
@@ -934,7 +934,7 @@ footer .footer-content {
 }
 
 .contact-panel {
-  padding: 5.5rem 0;
+  padding: 4.25rem 0 5.5rem;
   background: #f6f3f0;
 }
 
@@ -945,6 +945,26 @@ footer .footer-content {
   align-items: stretch;
 }
 
+.contact-panel-header {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.contact-panel-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.contact-panel-header p {
+  margin: 0 auto;
+  max-width: 640px;
+  line-height: 1.7;
+  color: rgba(58, 58, 58, 0.8);
+}
+
 .contact-card {
   background: #ffffff;
   border-radius: 1.5rem;
@@ -952,18 +972,17 @@ footer .footer-content {
   border: 1px solid rgba(17, 17, 17, 0.08);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-.contact-card h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 2.6rem);
-  margin: 0;
+.map-thumb {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
 }
 
-.contact-card p {
-  margin: 0;
-  line-height: 1.75;
+.map-thumb iframe {
+  display: block;
 }
 
 .contact-actions {
@@ -981,11 +1000,30 @@ footer .footer-content {
   background: rgba(58, 58, 58, 0.05);
 }
 
-.contact-details {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(58, 58, 58, 0.7);
+.contact-meta {
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(58, 58, 58, 0.85);
+}
+
+.contact-meta p {
+  margin: 0;
+}
+
+.contact-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-meta a:hover {
+  text-decoration: underline;
+}
+
+.contact-meta .schedule {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(58, 58, 58, 0.75);
 }
 
 .contact-form {
@@ -996,6 +1034,12 @@ footer .footer-content {
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.05);
   display: grid;
   gap: 1rem;
+}
+
+.contact-form h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
 }
 
 .contact-form input,
@@ -1043,6 +1087,10 @@ footer .footer-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .contact-panel-header {
+    text-align: left;
+  }
+
   .contact-panel .container {
     grid-template-columns: 1fr;
   }
@@ -1060,6 +1108,10 @@ footer .footer-content {
   .feature-points {
     grid-template-columns: 1fr;
     margin: 2rem 0 1.5rem;
+  }
+
+  .contact-panel-header {
+    text-align: center;
   }
 
   .contact-panel {
