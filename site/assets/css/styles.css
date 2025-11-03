@@ -1274,14 +1274,25 @@ footer .footer-content {
 
 .service-suite-copy ul {
   margin: 0;
-  padding-left: 1.25rem;
+  padding: 0;
+  list-style: none;
   display: grid;
-  gap: 0.35rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.45rem 1rem;
   color: rgba(33, 24, 17, 0.82);
 }
 
 .service-suite-copy li {
+  position: relative;
+  padding-left: 0.85rem;
   line-height: 1.55;
+}
+
+.service-suite-copy li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
 }
 
 .service-process {
