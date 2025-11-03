@@ -1809,6 +1809,10 @@ form[data-formsubmit] input[type="email"][data-invalid='true'] {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
+.video-duo-item.video-duo-top {
+  object-position: center 33%;
+}
+
 .about-hero {
   position: relative;
   padding: clamp(3rem, 10vw, 4.5rem) 1.5rem;
