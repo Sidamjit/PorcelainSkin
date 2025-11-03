@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -74,6 +74,16 @@
       </div>
     </section>
 
+    <section class="video-duo">
+      <div class="video-duo-heading">
+        <h2>Our mahi</h2>
+      </div>
+      <div class="container video-duo-grid">
+        <video class="video-duo-item" src="assets/images/Wedo.MOV" autoplay muted loop playsinline></video>
+        <video class="video-duo-item" src="assets/images/2.mov" autoplay muted loop playsinline></video>
+      </div>
+    </section>
+
     <section class="feature-split">
       <div class="container">
         <div class="feature-media">
@@ -86,7 +96,7 @@
           <div class="feature-points">
             <article class="feature-point">
               <h3>Bespoke programmes</h3>
-              <p>Skin mapping, progress reviews and at-home coaching tailored to your lifestyle.</p>
+              <p>Skin consultations, progress reviews and at-home coaching tailored to your lifestyle.</p>
             </article>
             <article class="feature-point">
               <h3>Advanced technology</h3>
@@ -157,20 +167,42 @@
             </div>
           </div>
         </div>
-        <form class="contact-form" action="https://formsubmit.co/info@porcelainskin.co.nz" method="POST">
+        <form class="contact-form" action="https://formsubmit.co/info@porcelainskin.co.nz" method="POST" data-formsubmit>
           <h3>Send a message</h3>
-          <input type="hidden" name="_subject" value="New enquiry from Porcelain Skin website" />
+          <input type="hidden" name="_subject" value="" />
+          <input type="hidden" name="enquiry_id" value="" />
           <input type="hidden" name="_captcha" value="false" />
           <label class="sr-only" for="contact-name">Name</label>
           <input id="contact-name" type="text" name="name" placeholder="Name" required />
           <label class="sr-only" for="contact-email">Email</label>
-          <input id="contact-email" type="email" name="email" placeholder="Email" required />
-          <label class="sr-only" for="contact-subject">Subject</label>
-          <input id="contact-subject" type="text" name="subject" placeholder="Subject" />
+          <input
+            id="contact-email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            inputmode="email"
+            autocomplete="email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+            title="Enter a valid email address, e.g. name@example.com"
+            required
+          />
+          <label class="sr-only" for="contact-phone">Phone</label>
+          <input
+            id="contact-phone"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            inputmode="tel"
+            autocomplete="tel"
+            pattern="^[0-9+()\s-]{7,}$"
+            title="Include a phone number so we can reach you back."
+            required
+          />
           <label class="sr-only" for="contact-message">Message</label>
           <textarea id="contact-message" name="message" placeholder="How can we help?" required></textarea>
           <button type="submit" class="button primary">Submit</button>
           <small>Messages are sent securely to info@porcelainskin.co.nz.</small>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -187,5 +219,6 @@
     </footer>
     <script src="assets/js/testimonial-rotator.js"></script>
     <script src="assets/js/nav-toggle.js"></script>
+    <script src="assets/js/formsubmit-handler.js"></script>
   </body>
 </html>

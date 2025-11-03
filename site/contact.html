@@ -67,16 +67,36 @@
               <span>Friday – Sunday: 9am – 6pm</span>
             </div>
           </div>
-          <form action="https://formsubmit.co/info@porcelainskin.co.nz" method="POST">
-            <input type="hidden" name="_subject" value="New enquiry from Porcelain Skin website" />
+          <form action="https://formsubmit.co/info@porcelainskin.co.nz" method="POST" data-formsubmit>
+            <input type="hidden" name="_subject" value="" />
+            <input type="hidden" name="enquiry_id" value="" />
             <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="text" name="phone" placeholder="Phone" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              inputmode="email"
+              autocomplete="email"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+              title="Enter a valid email address, e.g. name@example.com"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              inputmode="tel"
+              autocomplete="tel"
+              pattern="^[0-9+()\s-]{7,}$"
+              title="Include a phone number so we can reach you back."
+              required
+            />
             <textarea name="message" placeholder="How can we help?" required></textarea>
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <button type="submit">Submit</button>
             <small>Messages route directly to info@porcelainskin.co.nz via FormSubmit.</small>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -92,5 +112,6 @@
       </div>
     </footer>
     <script src="assets/js/nav-toggle.js"></script>
+    <script src="assets/js/formsubmit-handler.js"></script>
   </body>
 </html>

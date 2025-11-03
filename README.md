@@ -19,7 +19,9 @@ All imagery references the Wix CDN so the original visuals remain intact without
 
 ## Contact Form
 
-Both enquiry forms submit via [`formsubmit.co`](https://formsubmit.co/) and are preconfigured to deliver messages to `info@porcelainskin.co.nz`. Update the `action` attribute if you decide to switch to another inbox or automation service. Most modern static hosts (Netlify, Vercel, GitHub Pages, etc.) can serve this site without additional backend work.
+Both enquiry forms submit via [`formsubmit.co`](https://formsubmit.co/) and are preconfigured to deliver messages to `info@porcelainskin.co.nz`. Submissions are handled asynchronously so visitors remain on the page and receive a success/error message inline. Each successful submit generates a short reference like `PS-DDMMHHMMA1` (shared with the customer in the success notice and injected into the email subject alongside their phone number) so you can track conversations quickly. If JavaScript is disabled the native POST still works, falling back to FormSubmit’s default response.
+
+The first submission from any new email address will trigger FormSubmit’s activation flow—look for the confirmation link sent to that inbox and click it once to start receiving enquiries. Update the `action` value or JavaScript endpoint if you switch to another inbox or automation service. Most modern static hosts (Netlify, Vercel, GitHub Pages, etc.) can serve this site without additional backend work.
 
 ## Hosting
 
