@@ -15,6 +15,7 @@
   box-sizing: border-box;
 }
 
+/* Base page defaults */
 html,
 body {
   margin: 0;
@@ -23,13 +24,10 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   scroll-behavior: smooth;
-}
-
-/* Prevent horizontal overflow on small devices (hide any accidental overflow)
-   This avoids the white gap users can pan/zoom to on mobile while keeping
-   pinch-zoom accessibility (we do not disable zooming).
-*/
-html, body {
+  /* Prevent horizontal overflow on small devices (hide any accidental overflow)
+     This avoids the white gap users can pan/zoom to on mobile while keeping
+     pinch-zoom accessibility (we do not disable zooming).
+  */
   max-width: 100%;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
@@ -43,6 +41,46 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Video Gallery Section */
+.video-gallery {
+  background: var(--color-background-dark);
+  padding: 4rem 1rem;
+}
+
+.video-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.video-card {
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 1.5rem;
+  }
 }
 
 header {
@@ -147,9 +185,7 @@ header {
   }
 
   /* hide long nav links in mobile minimal mode */
-  .nav-links {
-    display: none;
-  }
+  /* (kept single .nav-links rule later in this media query) */
 
   .brand {
     margin: 0;
@@ -272,9 +308,9 @@ header {
 
 .hero {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
-    url("assets/images/Main Lady.png") center/cover;
-  /* increased from 70vh -> 91vh (30% taller) */
-  min-height: 91vh;
+    url('/assets/images/Main Lady.png') center/cover;
+  /* increased from 70vh -> 84vh (20% taller) */
+  min-height: 84vh;
   color: var(--color-text-light);
   display: flex;
   align-items: center;
