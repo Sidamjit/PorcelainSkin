@@ -1,5 +1,5 @@
 :root {
-  --color-background-dark: #0d0d0d;
+  --color-background-dark: #000000;
   --color-background: #f4f4f4;
   --color-accent: #c5965f;
   --color-accent-light: #e4c5b6;
@@ -23,6 +23,16 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow on small devices (hide any accidental overflow)
+   This avoids the white gap users can pan/zoom to on mobile while keeping
+   pinch-zoom accessibility (we do not disable zooming).
+*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -49,7 +59,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1.25rem;
+  /* Increased vertical padding for a taller desktop header */
+  padding: 1.6rem 1rem;
   font-size: 0.95rem;
 }
 
@@ -59,7 +70,8 @@ header {
 
 .brand img {
   display: block;
-  height: 3.5rem;
+  /* larger logo on desktop */
+  height: 4.76rem;
   width: auto;
 }
 
@@ -67,6 +79,12 @@ header {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+}
+
+/* hide the mobile nav toggle on larger screens; shown only via the
+   mobile media query below */
+.nav-toggle {
+  display: none;
 }
 
 .nav-links a {
@@ -88,7 +106,7 @@ header {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   font-size: 0.85rem;
 }
 
@@ -111,6 +129,98 @@ header {
     width: auto;
     padding: 0.35rem 0.9rem;
     gap: 0.5rem;
+  }
+}
+
+/* Mobile header: minimal, centered brand with icon actions beneath
+   Hide the full nav-links on small screens for a cleaner mobile UX.
+*/
+@media (max-width: 639px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Make header more compact while allowing a larger logo */
+    /* tightened vertical spacing for mobile */
+    padding: 0.05rem 0.35rem 0;
+    gap: 0;
+  }
+
+  /* hide long nav links in mobile minimal mode */
+  .nav-links {
+    display: none;
+  }
+
+  .brand {
+    margin: 0;
+    /* remove extra gap below logo; keep it tightly stacked */
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .brand img {
+    /* larger logo on mobile; reduced padding keeps header compact */
+    height: 4.32rem !important;
+    width: auto !important;
+  }
+
+  /* center the action icons and increase tappable area */
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0;
+    /* keep actions very close to the hamburger */
+    margin-top: 0;
+  }
+
+  .nav-actions a.icon-link {
+    padding: 0.15rem;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* keep the phone label hidden on small screens for a compact bar */
+  .nav-actions .icon-label {
+    display: none !important;
+  }
+
+  /* hamburger toggle button (mobile) */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    padding: 0.05rem 0.12rem;
+    /* remove vertical margin so the toggle hugs the logo above */
+    margin: 0;
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  /* hide the full nav by default; will be shown when .open is added */
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem 0;
+    background: var(--color-background-dark);
+    width: 100%;
+  }
+
+  /* keep the brand and actions visually separated when nav opens */
+  .navbar {
+    position: relative;
   }
 }
 
@@ -162,8 +272,9 @@ header {
 
 .hero {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
-    url('https://static.wixstatic.com/media/11062b_28328ed84275454cb9e9f627a0d05a27~mv2.jpg/v1/crop/x_0,y_6,w_4581,h_3042/fill/w_1800,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Laser%20Treatment.jpg') center/cover;
-  min-height: 70vh;
+    url("assets/images/Main Lady.png") center/cover;
+  /* increased from 70vh -> 91vh (30% taller) */
+  min-height: 91vh;
   color: var(--color-text-light);
   display: flex;
   align-items: center;
