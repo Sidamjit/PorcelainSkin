@@ -331,6 +331,14 @@ header {
   align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .hero-shell {
+    margin-left: clamp(0.5rem, 6vw, 6rem);
+    margin-right: clamp(3rem, 18vw, 16rem);
+    gap: clamp(5.5rem, 20vw, 20rem);
+  }
+}
+
 .hero .hero-content {
   max-width: 560px;
 }
@@ -434,6 +442,7 @@ header {
 .hero-aside {
   display: flex;
   justify-content: center;
+  padding-left: 5rem;
 }
 
 .glow-card {

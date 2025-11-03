@@ -19,7 +19,7 @@ All imagery references the Wix CDN so the original visuals remain intact without
 
 ## Contact Form
 
-The contact forms currently point to [`formsubmit.co`](https://formsubmit.co/) using a placeholder address (`YOUR_EMAIL_HERE`). Replace that value with the email or API endpoint you control. Most modern static hosts (Netlify, Vercel, GitHub Pages, etc.) can serve this site without additional backend work.
+Both enquiry forms submit via [`formsubmit.co`](https://formsubmit.co/) and are preconfigured to deliver messages to `info@porcelainskin.co.nz`. Update the `action` attribute if you decide to switch to another inbox or automation service. Most modern static hosts (Netlify, Vercel, GitHub Pages, etc.) can serve this site without additional backend work.
 
 ## Hosting
 
