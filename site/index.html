@@ -101,11 +101,34 @@
       </div>
     </section>
 
-    <section class="testimonial-strip">
+    <section class="testimonial-strip" aria-labelledby="reviews-title">
       <div class="container">
-        <blockquote>“Siya made me feel so comfortable and my skin has never looked clearer. I love the calm experience every visit.”</blockquote>
-        <cite>Kelly • Laser client</cite>
-        <span class="testimonial-source">Real feedback via Fresha</span>
+        <div class="testimonial-intro">
+          <span class="section-eyebrow">Client love</span>
+          <h2 id="reviews-title">Reviews direct from Fresha</h2>
+        </div>
+        <div class="testimonial-carousel" data-testimonial-rotator>
+          <button class="testimonial-arrow" type="button" aria-label="Show previous review" data-rotator-prev>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="testimonial-body" data-rotator-body role="status" aria-live="polite">
+            <blockquote data-rotator-quote>Loading client stories…</blockquote>
+            <cite data-rotator-cite>Porcelain Skin client</cite>
+            <span class="testimonial-source">Real feedback via Fresha</span>
+          </div>
+          <button class="testimonial-arrow" type="button" aria-label="Show next review" data-rotator-next>
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+        <div class="testimonial-dots" data-rotator-dots></div>
+        <a
+          class="testimonial-more"
+          href="https://www.fresha.com/a/porcelain-skin-papamoa-beach-7-gravatt-road-vk69e306?reviews=true#modal-reviews"
+          target="_blank"
+          rel="noopener"
+        >
+          Read more reviews on Fresha
+        </a>
       </div>
     </section>
 
@@ -162,6 +185,7 @@
         <p>© 2024 Porcelain Skin. Recreated for affordable hosting.</p>
       </div>
     </footer>
+    <script src="assets/js/testimonial-rotator.js"></script>
     <script src="assets/js/nav-toggle.js"></script>
   </body>
 </html>
