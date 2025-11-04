@@ -2,6 +2,8 @@
 
 Visit the live site: [porcelainskin.co.nz](https://www.porcelainskin.co.nz)
 
+![Porcelain Skin & Laser website preview](assets/images/readme-hero.png)
+
 Designed and delivered a modern, high-end web experience for Porcelain Skin, a beauty salon that is gaining popularity. The design direction came from researching the studio’s core audience — women across age groups seeking calm, confidence-focused treatments — which led to a visual style centered on soft contrast, generous spacing, and warm editorial imagery instead of generic template layouts.
 
 The previous site ran on a Wix plan costing ~$850 USD every two years. This custom build is faster, easier to navigate, more brand-aligned, and avoids ongoing platform fees. The studio has already reported excellent client feedback describing the site as “clean,” “premium,” and “much easier to use.”
