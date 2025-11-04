@@ -317,7 +317,7 @@ header {
       rgba(14, 14, 14, 0.16) 45%,
       rgba(14, 14, 14, 0.05) 100%
     ),
-    url('/assets/images/Main Lady.png') 44% center/cover;
+    url('/site/assets/images/Main Lady.png') 44% center/cover;
   min-height: 80vh;
   color: var(--color-text-light);
   display: flex;
@@ -1075,7 +1075,6 @@ footer .footer-content {
   color: rgba(35, 24, 16, 0.7);
 }
 
-<~>*** End Patch
 
 .package-price strong {
   font-family: var(--font-heading);
