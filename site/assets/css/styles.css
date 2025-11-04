@@ -1626,8 +1626,9 @@ footer .footer-content {
 }
 
 .contact-panel {
-  padding: 4.25rem 0 5.5rem;
+  padding: 2.125rem 0 5.5rem;
   background: #f6f3f0;
+  
 }
 
 .contact-panel .container {
