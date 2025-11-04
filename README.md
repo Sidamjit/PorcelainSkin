@@ -1,6 +1,6 @@
 # Porcelain Skin & Laser Static Site
 
-A static rebuild of [porcelainskin.co.nz](https://www.porcelainskin.co.nz) designed for lightweight hosting while keeping the brand's look, content, and lead capture intact. All public files live under `site/` so you can deploy the folder as-is to most static hosts.
+A beautifully designed website to for a skin and laser salon. Designed to increase trust and confidence while attracting customers.
 
 ## Project Layout
 
