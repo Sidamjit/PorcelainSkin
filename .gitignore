@@ -1,0 +1,15 @@
+# macOS Finder rubbish
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnail caches
+._*
+
+# Logs
+*.log
+
+# If you ever add build tools later:
+dist/
+build/
+node_modules/
