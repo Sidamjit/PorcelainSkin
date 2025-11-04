@@ -56,4 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
       history.replaceState(null, '', '#contact-section');
     }
   }
+
+  const userAgent = window.navigator.userAgent || '';
+  const isIosChrome = /CriOS/i.test(userAgent);
+  if (isIosChrome) {
+    document.querySelectorAll('[data-ios-chrome-self]').forEach((link) => {
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+    });
+  }
 });
