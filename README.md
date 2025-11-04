@@ -1,28 +1,41 @@
-# Porcelain Skin Static Website
+# Porcelain Skin & Laser Static Site
 
-This repository contains a static rebuild of [porcelainskin.co.nz](https://www.porcelainskin.co.nz) designed for affordable hosting providers.
+A static rebuild of [porcelainskin.co.nz](https://www.porcelainskin.co.nz) designed for lightweight hosting while keeping the brand's look, content, and lead capture intact. All public files live under `site/` so you can deploy the folder as-is to most static hosts.
 
-## Structure
+## Project Layout
 
-The site lives in the `site/` directory and includes:
+- `site/index.html` - Home page with hero, video highlights, testimonials, studio info, and a contact form.
+- `site/services.html` - End-to-end treatment overview with imagery for each service pillar.
+- `site/packages.html` - Curated treatment bundles and pricing guidance.
+- `site/about.html` - Brand story, booking CTAs, and an embedded studio video.
+- `site/thank-you.html` - Friendly confirmation screen linked from FormSubmit's fallback flow.
+- `site/assets/css/styles.css` - Shared palette, typography, responsive utilities, and layout rules.
+- `site/assets/js/` - Client-side enhancements:
+  - `testimonial-rotator.js` builds and cycles through Fresha review quotes with pause-on-hover and dot navigation.
+  - `nav-toggle.js` handles the mobile menu, deep-link scroll to `#contact-section`, and focus management.
+  - `formsubmit-handler.js` validates fields, generates enquiry IDs, and submits forms to FormSubmit via AJAX.
+- `site/assets/images/` - Local images, video loops, and iconography referenced throughout the pages.
 
-- `index.html` – home page with hero banner, service highlights, hours, and contact form.
-- `services.html` – detailed service cards covering facials, massage, waxing, and cosmetic enhancements.
-- `packages.html` – curated skincare packages adapted from the original site.
-- `reviews.html` – client testimonials.
-- `about.html` – brand story, map embed, and key contact details.
-- `contact.html` – enquiry form and salon information.
-- `shop.html` – simple retail grid for featured products.
-- `assets/css/styles.css` – shared styling, colour palette, and responsive rules.
+## Interactive Behaviour
 
-All imagery references the Wix CDN so the original visuals remain intact without storing large binaries in the repository. Update the `src` attributes if you prefer local copies.
+- **Responsive navigation** collapses into a toggle on small screens and closes automatically after link selection.
+- **Testimonials carousel** rotates curated Fresha reviews every 7 seconds, supports manual controls, and pauses on hover/focus for accessibility.
+- **Contact form** validates email/phone input, creates a subject line that includes the generated enquiry reference and phone number, submits via [`formsubmit.co`](https://formsubmit.co/), and notifies visitors inline without leaving the page.
+- **Deep linking** to `index.html#contact-section` smoothly scrolls to the form and focuses the first field for faster lead capture.
 
-## Contact Form
+## Contact Form Notes
 
-Both enquiry forms submit via [`formsubmit.co`](https://formsubmit.co/) and are preconfigured to deliver messages to `info@porcelainskin.co.nz`. Submissions are handled asynchronously so visitors remain on the page and receive a success/error message inline. Each successful submit generates a short reference like `PS-DDMMHHMMA1` (shared with the customer in the success notice and injected into the email subject alongside their phone number) so you can track conversations quickly. If JavaScript is disabled the native POST still works, falling back to FormSubmit’s default response.
+- Messages are sent to `info@porcelainskin.co.nz`. Update the `action` attribute (and optional thank-you copy) if you change inboxes.
+- FormSubmit requires a one-time verification email the first time a new address receives a submission, so watch for it in that inbox.
+- Without JavaScript the form still posts directly to FormSubmit, which can redirect to `thank-you.html` by configuring the service's `_next` setting.
 
-The first submission from any new email address will trigger FormSubmit’s activation flow—look for the confirmation link sent to that inbox and click it once to start receiving enquiries. Update the `action` value or JavaScript endpoint if you switch to another inbox or automation service. Most modern static hosts (Netlify, Vercel, GitHub Pages, etc.) can serve this site without additional backend work.
+## Working Locally
 
-## Hosting
+1. Open `site/index.html` directly in a browser, **or**
+2. Serve the `site/` directory (for example: `npx serve site`) so relative links and the thank-you page work as they would in production.
 
-Upload the contents of the `site/` folder to your preferred static host. If the provider expects an entry point named `index.html` at the root, deploy the files exactly as they appear in this directory. Update DNS records to point your domain to the new host when you're ready to go live.
+Fonts load from Google Fonts; no build tooling or package installation is required.
+
+## Deploying
+
+Upload the contents of `site/` to your static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, etc.). Ensure `index.html` remains at the deployment root, keep asset paths intact, and point your domain's DNS at the host when you're ready to launch.
