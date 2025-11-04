@@ -638,9 +638,25 @@ header {
 }
 
 .schedule {
-  display: grid;
-  gap: 0.65rem;
   font-size: 1.05rem;
+}
+
+.schedule h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.schedule ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.schedule li {
+  margin: 0;
 }
 
 .contact-wrapper {
@@ -1695,7 +1711,7 @@ footer .footer-content {
 
 .contact-meta {
   display: grid;
-  gap: 0.6rem;
+  gap: 0.65rem;
   font-size: 0.95rem;
   color: rgba(58, 58, 58, 0.85);
 }
@@ -1714,9 +1730,20 @@ footer .footer-content {
 }
 
 .contact-meta .schedule {
-  margin-top: 0.5rem;
   font-size: 0.95rem;
   color: rgba(58, 58, 58, 0.75);
+}
+
+.contact-meta .schedule h4 {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-weight: 600;
+  color: rgba(58, 58, 58, 0.9);
+}
+
+.contact-meta .schedule ul {
+  gap: 0.3rem;
 }
 
 .contact-form {
