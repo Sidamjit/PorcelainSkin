@@ -44,10 +44,15 @@ The previous site ran on a Wix plan costing ~$850 USD every two years. This cust
 
 ## Results
 
-- $850/2yr saving for the small business
-- Client feedback has been consistently positive, citing a more luxurious feel and clearer service story and describing the site as “clean,” “premium,” and “much easier to use.”
-- The salon can showcase promotions, packages, and reviews without platform constraints or recurring Wix spend.
+- ~$850 USD saved every 2 years for the business
+
+- Clearer service explanation, improved booking clarity
+
+- Feedback describing the site as “premium,” “clean,” and “so much easier to use”
 
 ## License & Usage
 
-All copy, imagery, and branding remain the property of Porcelain Skin & Laser. Please seek permission from the business owner before reusing any materials. To experience the site, visit [porcelainskin.co.nz](https://www.porcelainskin.co.nz).
+This project is licensed under CC BY-NC-ND 4.0.
+The design and code may not be reused, modified, or redistributed commercially without permission.
+
+All copy, imagery, and branding remain the property of Porcelain Skin & Laser.
