@@ -317,7 +317,7 @@ header {
       rgba(14, 14, 14, 0.16) 45%,
       rgba(14, 14, 14, 0.05) 100%
     ),
-    url('/site/assets/images/Main Lady.png') 44% center/cover;
+    url('../images/relaxing-facial-ritual.png') 44% center/cover;
   min-height: 80vh;
   color: var(--color-text-light);
   display: flex;
