@@ -1,41 +1,53 @@
-# Porcelain Skin & Laser Static Site
+# Porcelain Skin & Laser - Marketing Microsite
 
-A beautifully designed website to for a skin and laser salon. Designed to increase trust and confidence while attracting customers.
+Visit the live site: [porcelainskin.co.nz](https://www.porcelainskin.co.nz)
 
-## Project Layout
+Designed and delivered a modern, high-end web experience for Porcelain Skin, a beauty salon that is gaining popularity. The design direction came from researching the studio’s core audience — women across age groups seeking calm, confidence-focused treatments — which led to a visual style centered on soft contrast, generous spacing, and warm editorial imagery instead of generic template layouts.
 
-- `site/index.html` - Home page with hero, video highlights, testimonials, studio info, and a contact form.
-- `site/services.html` - End-to-end treatment overview with imagery for each service pillar.
-- `site/packages.html` - Curated treatment bundles and pricing guidance.
-- `site/about.html` - Brand story, booking CTAs, and an embedded studio video.
-- `site/thank-you.html` - Friendly confirmation screen linked from FormSubmit's fallback flow.
-- `site/assets/css/styles.css` - Shared palette, typography, responsive utilities, and layout rules.
-- `site/assets/js/` - Client-side enhancements:
-  - `testimonial-rotator.js` builds and cycles through Fresha review quotes with pause-on-hover and dot navigation.
-  - `nav-toggle.js` handles the mobile menu, deep-link scroll to `#contact-section`, and focus management.
-  - `formsubmit-handler.js` validates fields, generates enquiry IDs, and submits forms to FormSubmit via AJAX.
-- `site/assets/images/` - Local images, video loops, and iconography referenced throughout the pages.
+The previous site ran on a Wix plan costing ~$850 USD every two years. This custom build is faster, easier to navigate, more brand-aligned, and avoids ongoing platform fees. The studio has already reported excellent client feedback describing the site as “clean,” “premium,” and “much easier to use.”
 
-## Interactive Behaviour
+## Why This Project Stands Out
 
-- **Responsive navigation** collapses into a toggle on small screens and closes automatically after link selection.
-- **Testimonials carousel** rotates curated Fresha reviews every 7 seconds, supports manual controls, and pauses on hover/focus for accessibility.
-- **Contact form** validates email/phone input, creates a subject line that includes the generated enquiry reference and phone number, submits via [`formsubmit.co`](https://formsubmit.co/), and notifies visitors inline without leaving the page.
-- **Deep linking** to `index.html#contact-section` smoothly scrolls to the form and focuses the first field for faster lead capture.
+- **Client-centered UX:** Navigation prioritises high-intent actions (call, book, directions) and keeps social links reliable on iOS Chrome, removing a friction point common in beauty sites.
+- **Warm, inclusive styling:** The visual system blends serif typography, soft gradients, and spa imagery to resonate with both first-time visitors and long-term clients.
+- **Performance-first delivery:** No frameworks, zero third-party bundles, and asynchronous form submits maintain a snappy feel on mid-range mobiles.
+- **Conversion-ready storytelling:** Services, skincare packages, testimonials, and brand story are structured as reusable modules, making it easy to scale or re-sequence content later.
+- **Operational savings:** Owning the codebase removes Wix lock-in while retaining features the team relies on: testimonials, booking CTAs, and lead capture.
 
-## Contact Form Notes
+## Tech Snapshot
 
-- Messages are sent to `info@porcelainskin.co.nz`. Update the `action` attribute (and optional thank-you copy) if you change inboxes.
-- FormSubmit requires a one-time verification email the first time a new address receives a submission, so watch for it in that inbox.
-- Without JavaScript the form still posts directly to FormSubmit, which can redirect to `thank-you.html` by configuring the service's `_next` setting.
+| Layer     | Approach                                                                  |
+|-----------|---------------------------------------------------------------------------|
+| Markup    | Hand-authored HTML5 with componentised sections                           |
+| Styling   | Vanilla CSS with custom properties, mobile-first breakpoints, no pre/post processors |
+| Behaviour | Lightweight ES6 modules for navigation, testimonial rotation, and form handling |
+| Hosting   | Static-host friendly; includes `CNAME` for custom-domain providers        |
 
-## Working Locally
+## Architecture Overview
 
-1. Open `site/index.html` directly in a browser, **or**
-2. Serve the `site/` directory (for example: `npx serve site`) so relative links and the thank-you page work as they would in production.
+```text
+/                    Project root
+|-- index.html        Hero, testimonials, contact capture
+|-- about.html        Brand story and salon overview
+|-- services.html     Treatment pillars with media
+|-- packages.html     Skincare programmes and CTAs
+|-- thank-you.html    Fallback confirmation page
+|-- favicon.ico       Site icon
+|-- assets/
+|   |-- css/styles.css            Core layout, typography, responsive rules
+|   |-- js/nav-toggle.js          Mobile nav, deep-link focus, iOS Chrome guard
+|   |-- js/testimonial-rotator.js Accessible carousel with manual controls
+|   |-- js/formsubmit-handler.js  Validation, AJAX submission, enquiry ID generation
+|   |-- images/                   Optimised imagery, video loops, icons
+|-- CNAME              Custom domain mapping
+```
 
-Fonts load from Google Fonts; no build tooling or package installation is required.
+## Results
 
-## Deploying
+- $850/2yr saving for the small business
+- Client feedback has been consistently positive, citing a more luxurious feel and clearer service story and describing the site as “clean,” “premium,” and “much easier to use.”
+- The salon can showcase promotions, packages, and reviews without platform constraints or recurring Wix spend.
 
-Upload the contents of `site/` to your static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, etc.). Ensure `index.html` remains at the deployment root, keep asset paths intact, and point your domain's DNS at the host when you're ready to launch.
+## License & Usage
+
+All copy, imagery, and branding remain the property of Porcelain Skin & Laser. Please seek permission from the business owner before reusing any materials. To experience the site, visit [porcelainskin.co.nz](https://www.porcelainskin.co.nz).
