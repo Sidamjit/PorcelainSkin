@@ -1729,7 +1729,7 @@ footer .footer-content {
 .faq-card summary {
   list-style: none;
   cursor: pointer;
-  padding: 1.45rem 2.2rem 1.45rem 3.35rem;
+  padding: 1.45rem 4.2rem 1.45rem 5.8rem;
   font-size: 1.12rem;
   font-weight: 600;
   font-family: var(--font-heading);
@@ -1744,7 +1744,7 @@ footer .footer-content {
 .faq-card summary::before {
   content: '?';
   position: absolute;
-  left: 1.3rem;
+  left: 1.8rem;
   top: 50%;
   width: 1.9rem;
   height: 1.9rem;
@@ -1761,7 +1761,7 @@ footer .footer-content {
 .faq-card summary::after {
   content: '';
   position: absolute;
-  right: 1.8rem;
+  right: 3.2rem;
   top: 50%;
   width: 0.7rem;
   height: 0.7rem;
@@ -1776,9 +1776,26 @@ footer .footer-content {
 }
 
 .faq-copy {
-  padding: 0 2.2rem 1.8rem 3rem;
+  padding: 0 3rem 1.8rem 5.8rem;
+}
+
+.faq-more-link {
+  margin-top: 1.4rem;
   color: var(--color-muted);
 }
+
+.faq-more-link .button {
+  font-size: 0.95rem;
+  background: rgba(15, 44, 51, 0.85);
+  color: var(--color-text-light);
+  box-shadow: 0 18px 35px rgba(15, 44, 51, 0.18);
+}
+
+.faq-more-link .button:hover,
+.faq-more-link .button:focus-visible {
+  background: rgba(15, 44, 51, 1);
+}
+
 
 .faq-copy p {
   margin: 0;
@@ -1822,7 +1839,7 @@ footer .footer-content {
   }
 
   .faq-card summary::after {
-    right: 1.3rem;
+    right: 1.9rem;
   }
 
   .faq-copy {
@@ -2337,14 +2354,14 @@ form[data-formsubmit] input[type="email"][data-invalid='true'] {
 }
 
 .faq-hero {
-  padding: clamp(3.3rem, 6vw, 4.8rem) 0 clamp(2.5rem, 5v, 4rem);
+  padding: clamp(1.3rem, 3vw, 2rem) 0 clamp(0.7rem, 2.5vw, 1.2rem);
   background: linear-gradient(180deg, #f9e9de 0%, rgba(249, 233, 222, 0.7) 65%, rgba(255, 255, 255, 0) 100%);
 }
 
 .faq-hero-inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(0.6rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
   gap: clamp(2rem, 4vw, 3rem);
@@ -2395,10 +2412,12 @@ form[data-formsubmit] input[type="email"][data-invalid='true'] {
 
 .faq-highlight {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.6rem;
+  margin-top: clamp(0.5rem, 1.6vw, 0.9rem);
 }
 
 .faq-highlight .mini-heading {
+  margin: 0 0 0.4rem 0;
   font-family: var(--font-heading);
   font-size: 1.05rem;
   color: var(--color-text);
@@ -2426,10 +2445,14 @@ form[data-formsubmit] input[type="email"][data-invalid='true'] {
 
 .faq-galleries {
   display: grid;
-  gap: clamp(2.5rem, 5vw, 3.5rem);
+  gap: clamp(3rem, 6vw, 4rem);
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.2rem, 3vw, 1.6rem) clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+.faq-galleries > .faq-section:first-child {
+  margin-top: clamp(0.4rem, 1.2vw, 0.8rem);
 }
 
 .faq-section {
