@@ -329,7 +329,7 @@ header {
   margin: 0 auto;
   padding: 5.5rem 1rem;
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 320px);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
   gap: 3rem;
   align-items: center;
 }
@@ -456,8 +456,8 @@ header {
 
 .hero-aside {
   display: flex;
-  justify-content: center;
-  padding-left: 5rem;
+  justify-content: flex-end;
+  padding-left: clamp(5rem, 12vw, 14rem);
 }
 
 .glow-card {
@@ -466,7 +466,8 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1.6rem;
   padding: 2.5rem;
-  max-width: 340px;
+  width: 100%;
+  max-width: 400px;
   color: var(--color-text-light);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
 }
@@ -527,6 +528,7 @@ header {
 
   .hero-aside {
     justify-content: flex-start;
+    padding-left: 0;
   }
 
   .glow-card {
@@ -1729,7 +1731,7 @@ footer .footer-content {
 .faq-card summary {
   list-style: none;
   cursor: pointer;
-  padding: 1.45rem 4.2rem 1.45rem 5.8rem;
+  padding: 1.45rem 5.1rem 1.45rem 6.4rem;
   font-size: 1.12rem;
   font-weight: 600;
   font-family: var(--font-heading);
@@ -1744,7 +1746,7 @@ footer .footer-content {
 .faq-card summary::before {
   content: '?';
   position: absolute;
-  left: 1.8rem;
+  left: 2.2rem;
   top: 50%;
   width: 1.9rem;
   height: 1.9rem;
@@ -1761,7 +1763,7 @@ footer .footer-content {
 .faq-card summary::after {
   content: '';
   position: absolute;
-  right: 3.2rem;
+  right: 3.4rem;
   top: 50%;
   width: 0.7rem;
   height: 0.7rem;
@@ -1776,7 +1778,7 @@ footer .footer-content {
 }
 
 .faq-copy {
-  padding: 0 3rem 1.8rem 5.8rem;
+  padding: 0 3.6rem 1.8rem 6.4rem;
 }
 
 .faq-more-link {
@@ -1828,22 +1830,22 @@ footer .footer-content {
   }
 
   .faq-card summary {
-    padding: 1.2rem 1.4rem 1.2rem 2.6rem;
+    padding: 1.2rem 2rem 1.2rem 3.4rem;
     font-size: 1.02rem;
   }
 
   .faq-card summary::before {
-    left: 1rem;
+    left: 1.4rem;
     width: 1.6rem;
     height: 1.6rem;
   }
 
   .faq-card summary::after {
-    right: 1.9rem;
+    right: 2.3rem;
   }
 
   .faq-copy {
-    padding: 0 1.4rem 1.35rem 2.6rem;
+    padding: 0 1.8rem 1.35rem 3.4rem;
   }
 }
 
